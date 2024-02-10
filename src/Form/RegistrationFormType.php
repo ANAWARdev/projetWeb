@@ -18,7 +18,12 @@ class RegistrationFormType extends AbstractType
     {
         $builder
             ->add('email')
-            ->add('agreeTerms', CheckboxType::class, [
+            ->add('nom')
+            ->add('prenom')
+            ->add('photo_profil')
+            ->add('nombre_enfant')
+            ->add('date_naissance')
+            ->add('RGPDConsent', CheckboxType::class, [
                 'mapped' => false,
                 'constraints' => [
                     new IsTrue([
